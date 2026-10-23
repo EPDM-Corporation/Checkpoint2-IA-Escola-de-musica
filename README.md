@@ -25,8 +25,8 @@ Nenhuma variável de ambiente ou segredo é necessário.
 
 ## Entregas e integração
 
-- `codex/catalogo-backend` → PR para `dev`: dados, contrato, regras Python e testes.
-- `codex/catalogo-frontend` → PR para `dev`: interface, imagens e integração PyScript.
+- `feature/catalogo-backend` → PR para `dev`: dados, contrato, regras Python e testes.
+- `feature/catalogo-frontend` → PR para `dev`: interface, imagens e integração PyScript.
 - Cada tarefa tem pelo menos três commits semânticos. Revisar e integrar ambos os PRs
   em `dev` para executar o catálogo completo; os PRs foram criados independentemente.
 - Homologar o resultado em `dev`, depois abrir PR de `dev` para `main`.
