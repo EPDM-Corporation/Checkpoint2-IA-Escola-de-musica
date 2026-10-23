@@ -135,13 +135,6 @@ def iniciar_painel():
         proxies.append(proxy)
         alvo.addEventListener(evento, proxy)
 
-    def atualizar_telemetria():
-        for tipo in ("busca", "filtro", "detalhe", "bloqueio"):
-            elemento(f"metrica-{tipo}").textContent = str(metricas.contadores[tipo])
-        elemento("ultima-acao").textContent = (
-            f"Última ação: {metricas.eventos[-1]['tipo']}." if metricas.eventos else "Nenhuma interação nesta sessão."
-        )
-
     def atualizar(evento=None, tipo=None):
         if tipo:
             metricas.registrar(tipo)
@@ -151,7 +144,6 @@ def iniciar_painel():
             metricas.registrar("bloqueio")
             elemento("erro-busca").textContent = str(erro)
             elemento("busca").setAttribute("aria-invalid", "true")
-            atualizar_telemetria()
             return
         elemento("erro-busca").textContent = ""
         elemento("busca").removeAttribute("aria-invalid")
@@ -171,7 +163,6 @@ def iniciar_painel():
         elemento("contagem").textContent = f"{quantidade} instrumento{'s' if quantidade != 1 else ''} encontrado{'s' if quantidade != 1 else ''}"
         for botao in document.querySelectorAll("[data-familia]"):
             botao.setAttribute("aria-pressed", "true" if botao.getAttribute("data-familia") == estado["familia"] else "false")
-        atualizar_telemetria()
 
     def selecionar_familia(evento):
         botao = evento.target.closest("button[data-familia]")
@@ -195,7 +186,6 @@ def iniciar_painel():
         item = next((i for i in catalogo if i["id"] == id_), None)
         if item is None:
             metricas.registrar("bloqueio")
-            atualizar_telemetria()
             return
         estado["origem"] = botao
         elemento("detalhe-nome").textContent = item["nome"]
@@ -214,7 +204,6 @@ def iniciar_painel():
             for nome, valor in zip(DIMENSOES, item["embedding"])
         )
         metricas.registrar("detalhe", id_)
-        atualizar_telemetria()
         elemento("detalhe").showModal()
 
     def fechar_detalhe(evento):
