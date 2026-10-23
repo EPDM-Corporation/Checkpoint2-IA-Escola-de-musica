@@ -67,7 +67,6 @@ h1 em { font-size: 1.11em; }
 .catalogo .eyebrow { color: #6d715d; }
 h2 { font-size: 38px; letter-spacing: -1.5px; font-weight: 500; margin-top: 12px; }
 h2 em { font-size: 1.13em; }
-.catalogo-cabecalho > p { font-size: 14px; line-height: 1.7; color: var(--secundario); }
 fieldset { border: none; padding: 0; margin: 0; min-width: 0; }
 fieldset:disabled { opacity: .5; }
 .linha-busca { display: flex; gap: 20px; align-items: center; }
@@ -75,17 +74,11 @@ fieldset:disabled { opacity: .5; }
 .campo-busca > span { font-size: 29px; padding-left: 18px; line-height: 1; }
 .campo-busca input { width: 100%; border: 0; outline-offset: -3px; background: transparent; border-radius: 10px; padding: 17px 16px; font-size: 14px; }
 .campo-busca input::placeholder { color: #71756a; opacity: 1; }
-.botao-texto { background: none; font-size: 13px; min-height: 44px; padding: 10px; }
-.botao-texto span { font-size: 17px; padding-left: 6px; }
 .linha-filtros { display: flex; gap: 20px; justify-content: space-between; align-items: center; margin-top: 24px; }
 .familias { display: flex; flex-wrap: wrap; gap: 6px; }
 .familias button { min-height: 40px; padding: 8px 17px; border: 1px solid transparent; border-radius: 30px; font-size: 13px; background: transparent; transition: background .15s; }
 .familias button:hover { border-color: #bfc4b2; }
 .familias button[aria-pressed='true'] { background: var(--tinta); color: white; }
-.seletores { display: flex; gap: 20px; }
-.seletores > div { display: flex; flex-direction: column; gap: 3px; }
-.seletores label { color: var(--secundario); font-size: 10px; }
-.seletores select { border: 0; border-bottom: 1px solid #c5c9bc; background: transparent; padding: 6px 20px 6px 0; font-size: 13px; min-height: 36px; max-width: 180px; }
 .erro { margin-top: 5px; color: #98382a; font-size: 14px; }
 .erro:empty { display: none; }
 .contagem { font-size: 11px; color: var(--secundario); margin-block: 26px 18px; }
@@ -163,7 +156,6 @@ meter::-webkit-meter-optimum-value { background: var(--verde); border-radius: 8p
   .hero .eyebrow { font-size: 10px; letter-spacing: 1px; }
   .assinatura { display: none; }
   .linha-filtros { flex-wrap: wrap; }
-  .seletores { margin-left: auto; }
   .catalogo-grid { gap: 16px; }
   .instrumento-conteudo { padding-inline: 18px; }
 }
@@ -189,17 +181,13 @@ meter::-webkit-meter-optimum-value { background: var(--verde); border-radius: 8p
   .numeros span { font-size: 10px; max-width: 90px; }
   .catalogo { padding-block: 42px; }
   h2 { font-size: 34px; }
-  .catalogo-cabecalho > p { display: none; }
   .catalogo-cabecalho { margin-bottom: 24px; }
   .linha-busca { gap: 5px; }
-  .botao-texto { padding-inline: 8px; font-size: 11px; }
-  .botao-texto span { display: none; }
   .campo-busca input { padding: 16px 10px; font-size: 13px; }
   .campo-busca > span { padding-left: 12px; }
   .linha-filtros { margin-top: 18px; gap: 16px; }
   .familias { gap: 3px; }
   .familias button { padding-inline: 13px; font-size: 11px; }
-  .seletores { margin-left: 0; gap: 24px; }
   .catalogo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .instrumento h3 { font-size: 21px; }
   .familia-label { font-size: 10px; }
@@ -224,8 +212,6 @@ meter::-webkit-meter-optimum-value { background: var(--verde); border-radius: 8p
   .instrumento-conteudo { padding: 22px 24px 0; }
   .descricao { font-size: 14px; }
   .familias button { padding-inline: 12px; }
-  .seletores { gap: 22px; }
-  .seletores select { max-width: 152px; font-size: 11px; }
   .detalhe-conteudo { padding: 24px 20px; }
   .detalhe-foto { height: 190px; }
   .ficha { gap: 10px; }

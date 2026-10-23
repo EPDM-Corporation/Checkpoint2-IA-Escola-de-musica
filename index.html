@@ -47,7 +47,6 @@
       <section id="catalogo" class="catalogo container" aria-labelledby="catalogo-titulo">
         <div class="catalogo-cabecalho">
           <div><p class="eyebrow">EXPLORE O CATÁLOGO</p><h2 id="catalogo-titulo">Qual é a sua <em>vibe?</em></h2></div>
-          <p>Um novo som pode estar<br>mais perto do que você imagina.</p>
         </div>
         <noscript><p class="aviso">Ative o JavaScript do navegador para carregar o Python via PyScript.</p></noscript>
         <div id="carregamento" class="aviso" role="status">
@@ -58,7 +57,6 @@
           <legend class="sr-only">Buscar e filtrar instrumentos</legend>
           <div class="linha-busca">
             <div class="campo-busca"><label for="busca" class="sr-only">Buscar instrumento, estilo ou característica</label><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Busque instrumento ou estilo" maxlength="80" aria-describedby="erro-busca" autocomplete="off"></div>
-            <button id="limpar" class="botao-texto" type="button">Limpar filtros <span aria-hidden="true">↺</span></button>
           </div>
           <p id="erro-busca" class="erro" role="alert"></p>
           <div class="linha-filtros">
@@ -69,7 +67,6 @@
               <button type="button" data-familia="Percussão" aria-pressed="false">Percussão</button>
               <button type="button" data-familia="Sopros" aria-pressed="false">Sopros</button>
             </div>
-            <div class="seletores"><div><label for="disponibilidade">Disponibilidade</label><select id="disponibilidade"><option value="Todos">Todos os status</option><option>Disponível</option><option>Em aula</option><option>Em manutenção</option></select></div><div><label for="ordem">Ordenar por</label><select id="ordem"><option value="nome">Nome: A–Z</option><option value="norma">Maior norma vetorial</option></select></div></div>
           </div>
         </fieldset>
         <p id="contagem" class="contagem" role="status" aria-live="polite" aria-atomic="true">Aguardando catálogo</p>

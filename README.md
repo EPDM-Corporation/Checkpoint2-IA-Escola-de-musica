@@ -1,7 +1,7 @@
 # Musicalia · Catálogo interativo
 
-Painel acadêmico de escola de música com busca, filtros de família e disponibilidade,
-ordenação por nome ou norma vetorial e detalhes dos instrumentos. HTML, CSS, JSON e
+Painel acadêmico de escola de música com busca, filtros de família
+e detalhes dos instrumentos com norma vetorial. HTML, CSS, JSON e
 Python via PyScript. Não há servidor de aplicação, banco, login ou reservas.
 
 ## Executar no Windows
@@ -78,10 +78,10 @@ O CI usa Python 3.14, instala requirements.txt e executa os testes e a compilaç
 
 1. Aguardar seis cards, quatro famílias e quatro instrumentos disponíveis.
 2. Buscar “violao”: deve retornar Violão sem exigir acento.
-3. Limpar; selecionar Cordas e Disponível: deve retornar somente Violão.
+3. Limpar a busca; selecionar Cordas: deve retornar Violão e Violino.
 4. Buscar um texto sem correspondência: ver estado vazio e usar “Ver todos”.
 5. Abrir Piano: conferir norma 1,803 e quatro descritores; fechar por botão e Escape.
-6. Ordenar por maior norma: Piano deve aparecer primeiro.
+6. Selecionar Teclas: deve aparecer somente Piano.
 7. Conferir navegação por Tab, foco no modal e layout em celular.
 8. Conferir os dados e a autoria das imagens antes de uma publicação externa.
 
