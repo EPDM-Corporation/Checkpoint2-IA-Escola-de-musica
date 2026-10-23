@@ -55,23 +55,23 @@ digitado e não envia eventos para serviços externos. O painel fica em “Sobre
 ## Dependências e testes
 
 Runtime fixado: [PyScript 2026.7.3](https://docs.pyscript.net/),
-Pyodide 0.27.7 (Python 3.12.7) e NumPy 2.0.2, conforme seu
-[lockfile de distribuição](https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide-lock.json).
+Pyodide 314.0.3 (Python 3.14.0) e NumPy 2.4.3, conforme seu
+[lockfile de distribuição](https://cdn.jsdelivr.net/pyodide/v314.0.3/full/pyodide-lock.json).
 A configuração é inline no index.html; `requirements.txt` fixa o mesmo NumPy para testes.
 
-Com Python 3.12, no Windows:
+Com Python 3.14, no Windows:
 
 ```powershell
-py -3.12 -m venv .venv
+py -3.14 -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 .venv\Scripts\python -m unittest discover -s tests -v
 ```
 
-No Mac/Linux substitua o primeiro comando por `python3.12 -m venv .venv` e use
+No Mac/Linux substitua o primeiro comando por `python3.14 -m venv .venv` e use
 `.venv/bin/python` nos demais. Para servir o site, não é necessário instalar NumPy localmente:
 o PyScript carrega a dependência no navegador.
 
-O CI usa Python 3.12, instala requirements.txt e executa os testes e a compilação Python.
+O CI usa Python 3.14, instala requirements.txt e executa os testes e a compilação Python.
 
 ## Conferência no navegador
 
