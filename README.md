@@ -6,6 +6,7 @@ Python via PyScript. Não há servidor de aplicação, banco, login ou reservas.
 
 ## Executar no Windows
 
+O ZIP de validação já combina backend e frontend. Extraia-o em uma pasta.
 Na pasta do projeto, com Python instalado:
 
 ```powershell
