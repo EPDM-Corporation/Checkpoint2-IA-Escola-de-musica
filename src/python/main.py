@@ -225,7 +225,7 @@ def iniciar_painel():
     atualizar()
     elemento("controles").disabled = False
     carregamento.hidden = True
-    status_runtime.textContent = "Catálogo pronto para explorar"
+    status_runtime.textContent = ""
 
 
 if sys.platform == "emscripten":
