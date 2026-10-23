@@ -1,2 +1,2 @@
-# Mesmo NumPy do lockfile do Pyodide 0.27.7; usado somente nos testes locais/CI.
-numpy==2.0.2
+# Mesmo NumPy do lockfile do Pyodide 314.0.3; usado somente nos testes locais/CI.
+numpy==2.4.3
