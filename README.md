@@ -30,7 +30,7 @@ Nenhuma variável de ambiente ou segredo é necessário.
 - Cada tarefa tem pelo menos três commits semânticos. Revisar e integrar ambos os PRs
   em `dev` para executar o catálogo completo; os PRs foram criados independentemente.
 - Homologar o resultado em `dev`, depois abrir PR de `dev` para `main`.
-- Nenhum push, merge ou workflow faz deploy automático.
+- Nenhum commit, push ou merge faz deploy automático.
 
 ## Estrutura
 
@@ -71,8 +71,6 @@ py -3.14 -m venv .venv
 No Mac/Linux substitua o primeiro comando por `python3.14 -m venv .venv` e use
 `.venv/bin/python` nos demais. Para servir o site, não é necessário instalar NumPy localmente:
 o PyScript carrega a dependência no navegador.
-
-O CI usa Python 3.14, instala requirements.txt e executa os testes e a compilação Python.
 
 ## Conferência no navegador
 

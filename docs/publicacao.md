@@ -1,6 +1,6 @@
 # Publicação manual e retorno
 
-Esta entrega é local e por pull request. O CI somente verifica código.
+Esta entrega é local e por pull request.
 
 ## Homologação
 
