@@ -1,11 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musicalia</title>
-</head>
-<body>
-    
-</body>
+    <meta name="description" content="Explore os instrumentos da Musicalia. Encontre sua família musical e descubra seu próximo som.">
+    <meta name="theme-color" content="#f7f6f0">
+    <title>Musicalia — Encontre seu som</title>
+    <link rel="icon" href="src/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="src/css/estilo.css">
+  </head>
+  <body>
+    <a class="pular" href="#catalogo">Pular para o catálogo</a>
+    <header class="cabecalho container">
+      <a class="marca" href="#inicio" aria-label="Musicalia, início"><span class="marca-simbolo" aria-hidden="true">♬</span> musicalia<span class="marca-ponto">.</span></a>
+      <nav aria-label="Navegação principal">
+        <a class="nav-ativo" href="#catalogo">Instrumentos</a>
+        <a href="#sobre">Sobre o projeto <span aria-hidden="true">↗</span></a>
+      </nav>
+      <span class="assinatura">ESCOLA DE MÚSICA</span>
+    </header>
+
+    <main id="inicio">
+      <section class="hero container" aria-labelledby="titulo">
+        <div class="hero-texto">
+          <p class="eyebrow"><span aria-hidden="true">✳</span> UM UNIVERSO DE POSSIBILIDADES</p>
+          <h1 id="titulo">Todo mundo tem<br>um <em>som</em> para<br>descobrir.</h1>
+          <p class="hero-descricao">Das primeiras notas às novas paixões. Explore nossos instrumentos e encontre o seu jeito de fazer música.</p>
+          <a class="botao-principal" href="#catalogo">Encontre seu instrumento <span aria-hidden="true">↗</span></a>
+          <p class="hero-nota">Sua próxima descoberta começa aqui.</p>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-foto" src="src/assets/banner-catalogo.jpg" alt="Músico tocando violão" width="736" height="736" fetchpriority="high">
+          <span class="hero-selo" aria-hidden="true">MENOS PRESSA.<br>MAIS MÚSICA.<span>♪</span></span>
+          <span class="hero-legenda">APRENDA. EXPERIMENTE. SINTA.</span>
+        </div>
+      </section>
+
+      <div class="numeros container" aria-label="Resumo do catálogo">
+        <p><strong id="total-instrumentos">—</strong><span>instrumentos para explorar</span></p>
+        <p><strong id="total-familias">—</strong><span>famílias musicais</span></p>
+        <p><strong id="total-disponiveis">—</strong><span>disponíveis agora</span></p>
+        <p class="numeros-mensagem">Um instrumento.<br><em>Infinitas possibilidades.</em></p>
+      </div>
+
+      <section id="catalogo" class="catalogo container" aria-labelledby="catalogo-titulo">
+        <div class="catalogo-cabecalho">
+          <div><p class="eyebrow">EXPLORE O CATÁLOGO</p><h2 id="catalogo-titulo">Qual é a sua <em>vibe?</em></h2></div>
+          <p>Um novo som pode estar<br>mais perto do que você imagina.</p>
+        </div>
+        <noscript><p class="aviso">Ative o JavaScript do navegador para carregar o Python via PyScript.</p></noscript>
+        <div id="carregamento" class="aviso" role="status">
+          <p>Preparando seu catálogo… O primeiro acesso carrega o Python e pode levar alguns instantes.</p>
+          <details><summary>Está demorando?</summary><p>Confira sua conexão com a internet. Abra a página por um servidor HTTP local (Live Server ou <code>python -m http.server</code>), aguarde o download do PyScript e recarregue se necessário.</p></details>
+        </div>
+        <fieldset id="controles" disabled>
+          <legend class="sr-only">Buscar e filtrar instrumentos</legend>
+          <div class="linha-busca">
+            <div class="campo-busca"><label for="busca" class="sr-only">Buscar instrumento, estilo ou característica</label><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Qual instrumento você quer conhecer?" maxlength="80" aria-describedby="erro-busca" autocomplete="off"></div>
+            <button id="limpar" class="botao-texto" type="button">Limpar filtros <span aria-hidden="true">↺</span></button>
+          </div>
+          <p id="erro-busca" class="erro" role="alert"></p>
+          <div class="linha-filtros">
+            <div id="familias" class="familias" role="group" aria-label="Família musical">
+              <button type="button" data-familia="Todas" aria-pressed="true">Todos</button>
+              <button type="button" data-familia="Cordas" aria-pressed="false">Cordas</button>
+              <button type="button" data-familia="Teclas" aria-pressed="false">Teclas</button>
+              <button type="button" data-familia="Percussão" aria-pressed="false">Percussão</button>
+              <button type="button" data-familia="Sopros" aria-pressed="false">Sopros</button>
+            </div>
+            <div class="seletores"><div><label for="disponibilidade">Disponibilidade</label><select id="disponibilidade"><option value="Todos">Todos os status</option><option>Disponível</option><option>Em aula</option><option>Em manutenção</option></select></div><div><label for="ordem">Ordenar por</label><select id="ordem"><option value="nome">Nome: A–Z</option><option value="norma">Maior norma vetorial</option></select></div></div>
+          </div>
+        </fieldset>
+        <p id="contagem" class="contagem" role="status" aria-live="polite" aria-atomic="true">Aguardando catálogo</p>
+        <div id="catalogo-grid" class="catalogo-grid"></div>
+        <div id="sem-resultados" class="vazio" hidden><span aria-hidden="true">♫</span><h3>Ainda não encontramos esse som.</h3><p>Tente outro nome, estilo musical ou família de instrumentos.</p><button id="limpar-vazio" class="botao-principal" type="button">Ver todos os instrumentos <span aria-hidden="true">↗</span></button></div>
+      </section>
+
+      <aside class="faixa-final container"><span aria-hidden="true">✳</span><p>Não existe um único jeito<br>de <em>fazer música.</em></p><a href="#catalogo">Descubra o seu <span aria-hidden="true">↗</span></a></aside>
+
+      <section id="sobre" class="sobre container" aria-labelledby="sobre-titulo">
+        <div><p class="eyebrow">POR TRÁS DAS NOTAS</p><h2 id="sobre-titulo">Música, dados<br>e descobertas.</h2><p>Um catálogo acadêmico interativo da escola fictícia Musicalia, com dados de demonstração. Os status não representam reservas reais.</p></div>
+        <div class="sobre-detalhes">
+          <details><summary>Como funciona a análise vetorial?</summary><p>Representamos cada instrumento por quatro descritores didáticos: acústico, rítmico, melódico e polifônico. A norma euclidiana resume a magnitude desse vetor. Eles foram definidos manualmente e não são gerados por um modelo treinado. A norma não é uma nota de qualidade.</p><p>Abra um instrumento para ver o vetor e seu cálculo.</p></details>
+          <details><summary>Telemetria desta sessão</summary><p>As métricas ficam somente na memória desta aba e são apagadas ao recarregar. Os termos de busca não são armazenados ou enviados.</p><dl class="metricas"><div><dt>Buscas</dt><dd id="metrica-busca">0</dd></div><div><dt>Filtros</dt><dd id="metrica-filtro">0</dd></div><div><dt>Detalhes</dt><dd id="metrica-detalhe">0</dd></div><div><dt>Bloqueios</dt><dd id="metrica-bloqueio">0</dd></div></dl><p id="ultima-acao">Nenhuma interação nesta sessão.</p></details>
+          <details><summary>Imagens e referências</summary><p>Seleção visual encontrada no Pinterest. As imagens ilustram o catálogo e não representam o acervo real de uma escola.</p><p><a href="docs/creditos-imagens.md">Ver links dos pins e fontes originais ↗</a></p></details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape container"><a class="marca" href="#inicio">musicalia<span class="marca-ponto">.</span></a><p>Feito para despertar o seu lado musical.</p><span id="runtime-status" role="status">Carregando catálogo</span></footer>
+
+    <dialog id="detalhe" aria-labelledby="detalhe-nome" aria-describedby="detalhe-descricao">
+      <button id="fechar-detalhe" type="button" class="fechar" aria-label="Fechar detalhes" autofocus>×</button>
+      <img id="detalhe-foto" class="detalhe-foto" alt="" width="640" height="400">
+      <div class="detalhe-conteudo"><p id="detalhe-familia" class="eyebrow"></p><h2 id="detalhe-nome"></h2><p id="detalhe-descricao"></p><p id="detalhe-tags" class="detalhe-tags"></p>
+        <dl class="ficha"><div><dt>Status</dt><dd id="detalhe-status"></dd></div><div><dt>Local</dt><dd id="detalhe-sala"></dd></div><div><dt>Nível</dt><dd id="detalhe-nivel"></dd></div></dl>
+        <div class="analise"><div class="analise-cabecalho"><div><p class="eyebrow">PERFIL VETORIAL</p><h3>O instrumento em números</h3></div><div class="norma"><span>Norma L2</span><strong id="detalhe-norma"></strong></div></div><div id="detalhe-vetores"></div><p class="formula"><span id="detalhe-formula"></span></p><p class="nota-vetorial">Descritores didáticos definidos manualmente. A norma indica magnitude, sem avaliar qualidade ou dificuldade.</p></div>
+      </div>
+    </dialog>
+  </body>
 </html>
