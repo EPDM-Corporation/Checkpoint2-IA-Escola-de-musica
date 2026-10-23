@@ -124,19 +124,11 @@ fieldset:disabled { opacity: .5; }
 .faixa-final p em { font-size: 1.15em; }
 .faixa-final a { margin-left: auto; text-decoration: none; font-size: 13px; border-bottom: 1px solid var(--tinta); padding-block: 8px; }
 .faixa-final a span { padding-left: 30px; font-size: 20px; }
-.sobre { display: grid; grid-template-columns: 1fr 1.2fr; gap: 90px; padding-block: 70px; }
+.sobre { padding-block: 48px; }
 .sobre h2 { font-size: 30px; }
-.sobre > div > p:last-child { color: var(--secundario); margin-top: 20px; font-size: 14px; max-width: 350px; }
-.sobre-detalhes details { border-bottom: 1px solid var(--linha); padding-block: 16px; }
-.sobre-detalhes summary { font-size: 14px; font-weight: 500; }
-.sobre-detalhes details > p { font-size: 13px; color: var(--secundario); margin-top: 14px; }
-.metricas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.metricas div { padding: 10px; border-radius: 6px; background: #eceee4; }
-.metricas dt { font-size: 11px; }
-.metricas dd { font-size: 20px; margin: 0; }
+.sobre > div > p:last-child { color: var(--secundario); margin-top: 20px; font-size: 14px; max-width: 600px; }
 .rodape { display: flex; gap: 24px; align-items: center; justify-content: space-between; border-top: 1px solid var(--linha); padding-block: 28px; }
 .rodape .marca { font-size: 22px; }
-.rodape p { font-size: 11px; color: var(--secundario); }
 #runtime-status { font-size: 10px; color: var(--verde); }
 dialog { width: min(760px, calc(100% - 32px)); max-height: 90dvh; border: 0; padding: 0; border-radius: 20px; color: var(--tinta); background: var(--branco); }
 dialog::backdrop { background: #171c17b8; backdrop-filter: blur(5px); }
@@ -174,7 +166,6 @@ meter::-webkit-meter-optimum-value { background: var(--verde); border-radius: 8p
   .seletores { margin-left: auto; }
   .catalogo-grid { gap: 16px; }
   .instrumento-conteudo { padding-inline: 18px; }
-  .sobre { gap: 40px; }
 }
 @media (max-width: 760px) {
   .container { width: calc(100% - 40px); }
@@ -216,7 +207,7 @@ meter::-webkit-meter-optimum-value { background: var(--verde); border-radius: 8p
   .faixa-final > span { font-size: 42px; }
   .faixa-final p { font-size: 23px; }
   .faixa-final a { margin-left: 60px; font-size: 13px; }
-  .sobre { grid-template-columns: 1fr; gap: 24px; padding-block: 46px; }
+  .sobre { padding-block: 46px; }
   .rodape { flex-wrap: wrap; gap: 16px; }
   #runtime-status { width: 100%; }
 }

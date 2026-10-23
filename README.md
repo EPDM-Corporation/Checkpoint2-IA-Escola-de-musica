@@ -51,7 +51,7 @@ vetorial; não há modelo treinado ou inferência de áudio. O JSON e os status 
 Os guardrails validam o esquema, IDs, caminhos de imagens, categorias e vetores;
 limitam a busca a 80 caracteres e escapam os textos renderizados. A telemetria
 mantém contadores e os últimos 50 eventos somente em memória. Não guarda o termo
-digitado e não envia eventos para serviços externos. O painel fica em “Sobre o projeto”.
+digitado e não envia eventos para serviços externos. As métricas são internas, sem painel visual.
 
 ## Dependências e testes
 
@@ -82,7 +82,7 @@ O CI usa Python 3.14, instala requirements.txt e executa os testes e a compilaç
 4. Buscar um texto sem correspondência: ver estado vazio e usar “Ver todos”.
 5. Abrir Piano: conferir norma 1,803 e quatro descritores; fechar por botão e Escape.
 6. Ordenar por maior norma: Piano deve aparecer primeiro.
-7. Conferir telemetria, navegação por Tab, foco no modal e layout em celular.
+7. Conferir navegação por Tab, foco no modal e layout em celular.
 8. Conferir os dados e a autoria das imagens antes de uma publicação externa.
 
 ## Fontes e publicação
