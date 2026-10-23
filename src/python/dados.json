@@ -1,0 +1,42 @@
+{
+  "versao": 1,
+  "dimensoes": ["Acústico", "Rítmico", "Melódico", "Polifônico"],
+  "instrumentos": [
+    {
+      "id": "violao", "nome": "Violão", "familia": "Cordas", "nivel": "Iniciante",
+      "status": "Disponível", "imagem": "src/assets/violao.jpg", "sala": "Estúdio 01",
+      "descricao": "Seis cordas, muitas possibilidades. Explore acordes, dedilhados e suas primeiras canções.",
+      "tags": ["MPB", "Folk", "Acompanhamento"], "embedding": [1.0, 0.6, 0.8, 0.9]
+    },
+    {
+      "id": "piano", "nome": "Piano", "familia": "Teclas", "nivel": "Todos os níveis",
+      "status": "Disponível", "imagem": "src/assets/piano.jpg", "sala": "Estúdio 02",
+      "descricao": "Da primeira melodia a novas harmonias. Um universo de expressão em preto e branco.",
+      "tags": ["Clássico", "Jazz", "Harmonia"], "embedding": [1.0, 0.5, 1.0, 1.0]
+    },
+    {
+      "id": "violino", "nome": "Violino", "familia": "Cordas", "nivel": "Intermediário",
+      "status": "Em aula", "imagem": "src/assets/violino.jpg", "sala": "Estúdio 03",
+      "descricao": "Um arco e quatro cordas para dar voz a melodias. Descubra timbres delicados e intensos.",
+      "tags": ["Clássico", "Orquestra", "Melodia"], "embedding": [1.0, 0.2, 1.0, 0.2]
+    },
+    {
+      "id": "bateria", "nome": "Bateria", "familia": "Percussão", "nivel": "Todos os níveis",
+      "status": "Disponível", "imagem": "src/assets/bateria.jpg", "sala": "Estúdio 04",
+      "descricao": "Encontre seu pulso. Trabalhe coordenação, grooves e o ritmo que move uma banda.",
+      "tags": ["Rock", "Pop", "Ritmo"], "embedding": [1.0, 1.0, 0.1, 0.2]
+    },
+    {
+      "id": "saxofone", "nome": "Saxofone", "familia": "Sopros", "nivel": "Intermediário",
+      "status": "Em manutenção", "imagem": "src/assets/saxofone.jpg", "sala": "Oficina",
+      "descricao": "Um som cheio de personalidade. Explore respiração, improviso e novas ideias musicais.",
+      "tags": ["Jazz", "Blues", "Improviso"], "embedding": [1.0, 0.4, 1.0, 0.1]
+    },
+    {
+      "id": "flauta", "nome": "Flauta transversal", "familia": "Sopros", "nivel": "Iniciante",
+      "status": "Disponível", "imagem": "src/assets/flauta.jpg", "sala": "Estúdio 05",
+      "descricao": "Leveza que vira música. Conheça a flauta e construa suas primeiras frases com o sopro.",
+      "tags": ["Clássico", "Choro", "Melodia"], "embedding": [1.0, 0.2, 1.0, 0.0]
+    }
+  ]
+}
