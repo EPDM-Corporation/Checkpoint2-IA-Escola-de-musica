@@ -139,7 +139,7 @@ def iniciar_painel():
         if tipo:
             metricas.registrar(tipo)
         try:
-            itens = filtrar_instrumentos(catalogo, elemento("busca").value, estado["familia"], elemento("disponibilidade").value, elemento("ordem").value)
+            itens = filtrar_instrumentos(catalogo, elemento("busca").value, estado["familia"])
         except ValueError as erro:
             metricas.registrar("bloqueio")
             elemento("erro-busca").textContent = str(erro)
@@ -172,8 +172,6 @@ def iniciar_painel():
 
     def limpar(evento):
         elemento("busca").value = ""
-        elemento("disponibilidade").value = "Todos"
-        elemento("ordem").value = "nome"
         estado["familia"] = "Todas"
         atualizar(tipo="filtro")
         elemento("busca").focus()
@@ -214,10 +212,7 @@ def iniciar_painel():
             estado["origem"].focus()
 
     ouvir(elemento("busca"), "input", lambda e: atualizar(e, "busca"))
-    ouvir(elemento("disponibilidade"), "change", lambda e: atualizar(e, "filtro"))
-    ouvir(elemento("ordem"), "change", lambda e: atualizar(e, "filtro"))
     ouvir(elemento("familias"), "click", selecionar_familia)
-    ouvir(elemento("limpar"), "click", limpar)
     ouvir(elemento("limpar-vazio"), "click", limpar)
     ouvir(elemento("catalogo-grid"), "click", abrir_detalhe)
     ouvir(elemento("fechar-detalhe"), "click", fechar_detalhe)
