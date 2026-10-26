@@ -41,7 +41,6 @@ src/python/main.py        validação, busca, telemetria e NumPy
 src/python/dados.json     base demonstrativa com contrato v1
 src/assets/               fotos locais e favicon
 tests/test_catalogo.py    testes das regras em CPython
-docs/                     contrato, fontes de imagens e publicação manual
 ```
 
 O vetor [acústico, rítmico, melódico, polifônico] usa valores didáticos manuais entre
@@ -82,9 +81,3 @@ o PyScript carrega a dependência no navegador.
 6. Selecionar Teclas: deve aparecer somente Piano.
 7. Conferir navegação por Tab, foco no modal e layout em celular.
 8. Conferir os dados e a autoria das imagens antes de uma publicação externa.
-
-## Fontes e publicação
-
-Ver [créditos das imagens](docs/creditos-imagens.md),
-[contrato dos dados](docs/contrato-dados.md) e
-[procedimento manual de publicação e retorno](docs/publicacao.md).
